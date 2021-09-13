@@ -1,0 +1,115 @@
+
+.section-intro {
+    width: 100%;
+    min-height: $home_intro_box_height;
+    background-color: $home_intro_bg;
+    color: $home-intro-font-color;
+    overflow: hidden;
+    
+    a {
+        color: $white !important;
+        cursor: pointer;
+    }
+
+    .desc-text {
+        color: gray("500");
+    }
+}
+/*
+.menu-is-collapsed {
+    .header {
+        -webkit-transition: background-color 0.5s;
+        -moz-transition: background-color 0.5s;
+        -o-transition: background-color 0.5s;
+        transition: background-color 0.5s
+    }
+}
+*/
+
+.main-header {
+    position: relative;
+    top: -60px;
+
+    .section-intro {
+        position: relative;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            min-height: 100vh;
+            padding: 80px 0;
+            background-position: 40% center;
+            background-size: cover;
+        }
+
+        .scroll-area {
+            position: absolute;
+            bottom: 35px;
+            margin-left: -25px;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            opacity: .9;
+            overflow: hidden;
+            display: none;
+        
+            a {
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                display: inline-block;
+                font-weight: normal;
+                font-size: 25px;
+                line-height: 44px;
+                color: #ffffff;
+                border-radius: 50%;
+                border: 3px #ffffff solid;
+            }
+        }
+    }
+
+    &.has-custom-header {
+        .desc-text {
+            color: gray("300");
+            padding: 15px 45px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-top-left-radius: 1.5em;
+            border-bottom-right-radius: 3em;
+            font-style: italic;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .admin-bar {
+        .main-header {
+            .section-intro {
+                min-height: calc(100vh - 46px);
+                padding: 60px 0;
+            }
+        }
+    }
+    .scroll-area {
+        display: inline-block !important;
+    }
+}
+
+.article-list {
+    color: #666666;
+    min-height: 250px;
+    overflow: hidden;
+
+    a {
+        color: #333333;
+
+        &:hover {
+            color: #0366dd;
+        }
+    }
+
+    .read-more-link {
+        color: #0366dd;
+    }
+}
+
+
+

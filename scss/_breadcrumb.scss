@@ -1,0 +1,32 @@
+.breadcrumb {
+    font-size: 0.813rem !important;
+    border-radius: 0 !important;
+
+    ul, li {
+        margin: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    li:last-child {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        @include media-breakpoint-down(sm) {
+            width: 50%;
+
+        }
+    }
+
+    i {
+        color: #333333;
+    }
+}
+
+.data-schema {
+    .breadcrumb {
+        margin-bottom: 0 !important;
+    }
+}
+

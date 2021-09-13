@@ -1,0 +1,128 @@
+
+
+.footer {
+    margin: 40px 0 20px 0;
+
+    .footer-columns {
+        font-weight: 400;
+        font-size: 13px;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+
+        a, strong {
+            font-weight: normal;
+            color: #333333;
+        }
+    }
+
+    .footer-nav {
+        text-align: center;
+        font-size: 14px;
+        display: inline-block;
+
+        ul.footer-menu {
+            padding: 0;
+            margin: 0;
+            display: inline-flex;
+            list-style-type: none;
+    
+            li {
+                margin: 0;
+
+                &:after {
+                    content: "|";
+                    color: #aaaaaa;
+                    margin: 0 10px;
+                    font-size: 13px;
+                }
+
+                &:last-child {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+
+            a {
+                font-size: 13px;
+            }
+        }
+
+        ul.social-icon-links {
+            padding: 0;
+            margin: 0;
+            display: inline-flex;
+            list-style-type: none;
+    
+            li {
+                margin: 5px 10px;
+            }
+
+            a {
+                color: #333333;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .footer-columns {
+            display: block;
+        }
+
+        .footer-nav {
+            display: block;
+    
+            ul.footer-menu {
+                display: block;
+                margin: 15px 0;
+
+                li {
+
+                    a {
+                        border: 1px #dddddd solid;
+                        display: block;
+                        padding: 5px 10px;
+                        margin: 5px 0;
+                        border-radius: 4px;
+                        text-decoration: none;
+
+                        &:hover {
+                            border: 1px #222222 solid;
+                            background-color: #333333;
+                            color: #ffffff;
+                        }
+
+                    }
+
+                    &:after {
+                        content: "";
+                        display: none;
+                    }
+                }
+            }
+    
+            ul.social-icon-links {
+                display: block;
+                list-style-type: none;
+
+                li {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .brand-link {
+        &:hover {
+            background-color: #f1f1f1;
+            color: #111111;
+        }
+    }
+}
+
+.home {
+    .footer {
+        border-top: 0;
+    }
+}
